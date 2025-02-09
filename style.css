@@ -7,49 +7,43 @@ body {
 }
 
 header {
-    background-color: #9782c9;
+    background-color: #6a5acd;
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
 main {
     padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 section {
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section#about {
-    background-color: #e6f7ff;
-}
-
-section#goals {
-    background-color: #fff2e6;
-}
-
-section#learning {
-    background-color: #e6ffe6;
-}
-
-section#future {
-    background-color: #f2e6ff;
-}
+section#about { background-color: #e6f7ff; }
+section#goals { background-color: #fff2e6; }
+section#learning { background-color: #e6ffe6; }
+section#future { background-color: #f2e6ff; }
 
 .profile {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    text-align: justify;
 }
 
 .profile-picture {
-    border: 2px solid #0073e6;
-    border-radius: 10px;
+    border: 3px solid #0073e6;
+    border-radius: 50%;
     margin-right: 20px;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
 }
 
 h1, h2 {
@@ -59,24 +53,26 @@ h1, h2 {
 a {
     color: #0073e6;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #005bb5;
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
 /* Popup styles */
-.popup {
+.popup, .congratulations {
     display: none;
     position: fixed;
     top: 0;
@@ -94,6 +90,7 @@ footer {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 input[type="text"] {
@@ -101,6 +98,8 @@ input[type="text"] {
     margin-top: 10px;
     margin-bottom: 20px;
     width: calc(100% - 40px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
@@ -110,6 +109,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -117,21 +117,6 @@ button:hover {
 }
 
 /* Congratulations styles */
-.congratulations {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    color: white;
-    text-align: center;
-}
-
 #confetti {
     position: absolute;
     width: 100%;
