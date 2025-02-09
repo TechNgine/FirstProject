@@ -39,6 +39,9 @@ section#future {
     background-color: #f2e6ff;
 }
 
+section#contactinfo {
+    background-color: #651fb0;
+}
 .profile {
     display: flex;
     align-items: center;
